@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(to top, red, blue);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    color: rgb(255, 255, 255);
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+.where {
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.bandeiras{
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    transition: scale 0.5 ease;
+}
+
+.bandeiras_responsive {
+    display: none;
+}
+.bandeiras_responsive:hover {
+    transform: scale(1.2);
+}
+
+.where p{
+    display: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 2px;
+    margin: auto;
+}
+.bandeiras:hover{
+    transform: scale(1.3);
+}
+
+
+.box {
+    background-color: blanchedalmond;
+    width: 650px;
+    height: 200px;
+    display: flex;
+    margin: 2em auto;
+    padding: 10px;
+    box-shadow: 5px 5px 8px 1px #0000004d;
+    text-align: center;
+}
+span {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+#Mundo{
+    margin-left: 10px;
+}
+.time {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 8em;
+    width: 200px;
+    color: #fff;
+    background-color: rgba(17, 17, 17, 0.92);
+    margin: 5px;
+    box-shadow: 2px 10px 10px #00000075;
+    border-radius: 15px;
+}
+
+@media(max-width:955px) {
+    header{
+        max-width: 300px;
+    }
+    #Mundo{
+        margin-right: 50px;
+    }
+    .box{
+        width: 500px;
+    }
+    .time{
+        width:150px;
+    }
+}
+@media(max-width:660px) {
+    header{
+        max-width: 300px;
+    }
+    .where {
+        max-width:660px;
+    }
+    .bandeiras {
+        display: none;
+    }
+    .bandeiras_responsive{
+        display: flex;
+    }
+
+    .box{
+        width: 350px;
+        height: 150px;
+    }
+    .time{
+        width:100px;
+        font-size: 5.5em;
+    }
+}
+@media(max-width:396px) {
+    header{
+        max-width: 300px;
+    }
+    .bandeiras {
+        display: none;
+    }
+    .bandeiras_responsive{
+        display: none;
+    }
+    .where p{
+        display: flex;
+    }
+    .where p:hover{
+        background-color: #000;
+        color: #fff;
+    }
+    span {
+        font-size: 15px;
+    }
+    .box{
+        width: 290px;
+        height: 120px;
+    }
+    .time{
+        width:80px;
+        font-size: 4em;
+    }
+}
+
+@media(max-width:285px) {
+    header{
+        max-width: 250px;
+        font-size: 14px;
+    }
+    .where p{
+        display: flex;
+        font-size: 12px;
+    }
+    .where p:hover{
+        background-color: #000;
+        color: #fff;
+        transform: scale(1.1);
+    }
+    .box{
+        width: 230px;
+        height: 95px;
+    }
+    .time{
+        width: 60px;
+        font-size: 3em;
+    }
+}
